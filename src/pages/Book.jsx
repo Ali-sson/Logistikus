@@ -139,12 +139,12 @@ function Book() {
                      
                      {/* Left Content */}
                      <div className="text-white ">
-                       <h1 data-aos="fade-up" data-aos-delay="100" className="mt-6 text-5xl font-bold leading-tight">
-                       Reliable Services for a Fast-Moving City
+                       <h1 data-aos="fade-up" data-aos-delay="100" className="mt-6 text-4xl md:text-5xl font-bold leading-tight">
+                       From Books to Errands
                        </h1>
                  
                        <p data-aos="fade-up" data-aos-delay="200" className="mt-6 max-w-lg text-lg text-white/90">
-                        From urgent packages to personal errands — Logistikus delivers speed, security, and peace of mind every step of the way.
+                        Logistikus delivers what matters, Fast and Safely.
                        </p>
                      </div>
                    </div>
