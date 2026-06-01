@@ -106,12 +106,12 @@ const services = [
           return (
             <div
               key={service.title}
-              className="grid items-center gap-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl md:grid-cols-[1fr_2fr_auto] md:p-10"
+              className="grid items-center gap-4 rounded-3xl border border-gray-200 bg-soft p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl md:grid-cols-[1fr_2fr_auto] md:p-10"
             >
 
               {/* Icon */}
-              <div className="grid h-20 w-20 place-items-center rounded-2xl bg-secondary text-white">
-                <Icon className="h-6 w-6" />
+              <div className="grid h-20 w-20 place-items-center rounded-2x text-secondary">
+              <Icon className="h-6 w-6 md:h-20 md:w-20" />
               </div>
 
               {/* Content */}
