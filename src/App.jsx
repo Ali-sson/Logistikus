@@ -2,6 +2,7 @@ import {Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Pricing from "./pages/Pricing";
 import FAQ from "./pages/FAQ";
 import Book from "./pages/Book";
 import Contact from "./pages/Contact";
@@ -28,7 +29,7 @@ function App() {
            <Route path="/services" element={<Services />} />
            <Route path="/faq" element={<FAQ />} />
            <Route path="/book" element={<Book />} />
-           <Route path="/pricing" element={<h1>Pricing Page - Coming Soon</h1>} />
+           <Route path="/pricing" element={<Pricing />} />
            <Route path= "/contact" element={<Contact />} />
       </Routes>
    

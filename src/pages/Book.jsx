@@ -143,7 +143,7 @@ function Book() {
                        From Books to Errands
                        </h1>
                  
-                       <p data-aos="fade-up" data-aos-delay="200" className="mt-6 max-w-lg text-lg text-white/90">
+                       <p data-aos="fade-up" data-aos-delay="200" className="mt-2 max-w-lg text-lg text-white/90">
                         Logistikus delivers what matters, Fast and Safely.
                        </p>
                      </div>
