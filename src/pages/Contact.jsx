@@ -10,6 +10,7 @@ import {
 import Navbar from "../components/Navbar";
 import SiteFooter from "../components/SiteFooter";
 import FaqHero from "../assets/FaqHero.jpeg";
+import { Helmet } from "react-helmet-async";
 
 function Contact() {
   const SITE = {
@@ -75,26 +76,17 @@ ${form.message}`;
   return (
     <>
       <Navbar />
-      {/* Hero Section
-      <section className="bg-[#0A3D78] py-20 text-white">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#1E88E5]">
-            Contact Us
-          </p>
 
-          <h1 className="mt-4 text-5xl font-bold leading-tight sm:text-6xl">
-            Let’s Talk
-          </h1>
+      {/* Meta tags Helmet */}
+      <Helmet>
+        <title>Contact Us | Logistikus</title>
+        <meta
+          name="description"
+          content="Get in touch with Logistikus for fast, reliable delivery services."
+        />
+      </Helmet>
 
-          <p className="mt-6 text-lg text-white/80">
-            WhatsApp is the fastest way to reach us — but
-            we’re available by phone, email, and office visits too.
-          </p>
-        </div>
-      </section> */}
-
-
-                          {/* HERO */}
+                {/* HERO */}
                           <section className="relative overflow-hidden">
                        {/* Background Image */}
                        <div className="absolute inset-0 lg:hidden ">
@@ -176,7 +168,8 @@ ${form.message}`;
             <div className="overflow-hidden rounded-2xl border border-gray-200">
               <iframe
                 title="map"
-                src="https://www.google.com/maps?q=Kaduna&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472.2358541657993!2d7.433986248753419!3d10.48345021992257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d3552877a389d%3A0x6fe356a4c43274c!2sGoraFarmFruitBar!5e0!3m2!1sen!2sus!4v1780700188734!5m2!1sen!2sus"
+                
                 className="h-72 w-full"
                 loading="lazy"
               />
@@ -260,3 +253,5 @@ ${form.message}`;
 }
 
 export default Contact;
+
+

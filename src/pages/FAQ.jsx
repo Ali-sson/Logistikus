@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import Navbar from "../components/Navbar";
 import SiteFooter from "../components/SiteFooter";
 import FaqHero from "../assets/FaqHero.jpeg";
+import { Helmet } from "react-helmet-async";
 
 
 const faqs = [
@@ -54,6 +55,22 @@ function FAQ() {
     <>
 
     <Navbar />
+
+    {/* Meta tags Helmet */}
+
+        <Helmet>
+        <title>Frequently Asked Questions | Logistiskus</title>
+
+        <meta
+          name="description"
+          content="Find answers to common questions about Logistiskus delivery and errand services, including booking, pricing, pickup, delivery times, and payment options."
+        />
+
+        <meta
+          name="keywords"
+          content="FAQ, frequently asked questions, delivery service, courier service, errand service, logistics, shipping, package delivery, Nigeria"
+        />
+      </Helmet>
 
 
                     {/* HERO */}

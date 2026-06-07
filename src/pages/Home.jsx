@@ -1,7 +1,10 @@
 
 
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import WhatsAppFloat from "../components/WhatsAppFloat";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 import {
   Zap,
@@ -33,8 +36,37 @@ function Home() {
   };
 
   const waLink = (message) => {
-    return `https://wa.me/2347012345678?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/2349112149392?text=${encodeURIComponent(message)}`;
   };
+
+  // HERO ARRAYS 
+
+  const slides = [
+  {
+    title: "Fast & Reliable",
+    highlight: "Delivery",
+    subtitle: "Across Your City",
+    description:
+      "From urgent packages to everyday errands — Logistikus delivers quickly, safely, and right on time.",
+    image: HeroImage,
+  },
+  // {
+  //   title: "Professional Errand Services",
+  //   highlight: "Errands",
+  //   subtitle: "Made Easy",
+  //   description:
+  //     "Need groceries, documents, or personal tasks completed? We handle them efficiently.",
+  //   image: HeroImage,
+  // },
+  {
+    title: "Corporate Logistics ",
+    highlight: "Solutions",
+    subtitle: "For Businesses",
+    description:
+      "Helping businesses move packages, documents, and products across the city.",
+    image: HeroImage,
+  },
+];
 
   const services = [
     {
@@ -150,20 +182,45 @@ function Home() {
         "I just send a WhatsApp message and it's done. Best errand service in the city, hands down.",
     },
   ];
+    
+     // Auto Slide  
+
+     const [currentSlide, setCurrentSlide] = useState(0);
+
+     useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentSlide((prev) =>
+      prev === slides.length - 1 ? 0 : prev + 1
+    );
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, []);
+
+
+
+
 
   return (
     <>
 
     <Navbar />
-      {/* HERO */}
+
+    {/* Meta tags Helmet */}
+    <Helmet>
+      <title>Logistikus - Fast & Reliable Delivery Services</title>
+      <meta name="description" content="Logistikus provides fast, reliable, and secure delivery services for individuals and businesses." />
+    </Helmet>
+
+    {/* HERO */}
      <section className="relative overflow-hidden">
   {/* Background Image */}
-  <div className="absolute inset-0 lg:hidden ">
-    <img
-      src={HeroImage}
-      alt="Delivery background"
-      className="h-full w-full object-cover"
-    />
+  <div className="absolute inset-0">
+   <img
+  src={slides[currentSlide].image}
+  alt="Delivery background"
+  className="h-full w-full object-cover transition-all duration-1000"
+/>
 
     {/* Dark Overlay */}
     <div className="absolute inset-0 bg-primary/80"></div>
@@ -181,19 +238,21 @@ function Home() {
         Same-day delivery
       </span>
 
-      <h1 data-aos="fade-up" data-aos-delay="100" className="mt-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl ">
-        Fast & Reliable
-        <br />
-        <span className="text-[#1E88E5]">Delivery</span> Across
-        <br />
-        Your City
-      </h1>
 
-      <p data-aos="fade-up" data-aos-delay="200" className="mt-6 max-w-lg text-lg text-white/90">
-        From urgent packages to everyday errands — Logistikus delivers
-        quickly, safely, and right on time.
-      </p>
 
+      <h1 className="mt-6 md:text-6xl font-bold leading-tight sm:text-4xl ">
+  {slides[currentSlide].title}
+  <br />
+  <span className="text-[#4FC3F7]">
+    {slides[currentSlide].highlight}
+  </span>
+  <br />
+  {slides[currentSlide].subtitle}
+</h1>
+
+     <p className="mt-6 max-w-lg text-lg text-white/90">
+  {slides[currentSlide].description}
+</p>
       {/* Buttons */}
       <div data-aos="zoom-in" data-aos-delay="100" className="mt-8 flex flex-wrap gap-4">
         <Link
@@ -211,6 +270,48 @@ function Home() {
           Contact Us
         </Link>
       </div>
+
+      {/* Navigation Dots */}
+
+      <div className="mt-10 flex gap-3">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrentSlide(index)}
+      className={`h-3 w-3 rounded-full transition-all ${
+        currentSlide === index
+          ? "bg-white w-8"
+          : "bg-white/40"
+      }`}
+    />
+  ))}
+</div>
+
+{/* <button
+  onClick={() =>
+    setCurrentSlide(
+      currentSlide === 0
+        ? slides.length - 1
+        : currentSlide - 1
+    )
+  }
+  className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur"
+>
+  <ChevronLeft />
+</button> */}
+
+{/* <button
+  onClick={() =>
+    setCurrentSlide(
+      currentSlide === slides.length - 1
+        ? 0
+        : currentSlide + 1
+    )
+  }
+  className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur"
+>
+  <ChevronRight />
+</button> */}
 
       {/* Reviews */}
       <div className="mt-10 flex items-center gap-5">
@@ -274,7 +375,7 @@ function Home() {
   </div>
 </section>
       {/* SERVICES */}
-      <section data-aos="fade-up" data-aos-delay="100" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 ">
+      <section data-aos="fade-up" data-aos-delay="100" className="mx-auto px-4 py-20 sm:px-6 lg:px-8 bg-soft ">
         <div className="mb-12 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             What we do
@@ -285,13 +386,13 @@ function Home() {
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
           {services.map((s) => (
             <div
               key={s.title}
               className="group rounded-2xl border bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="grid h-12 w-12 place-items-center rounded-xl text-secondary transition-colors group-hover:bg-accent group-hover:text-white">
+              <div className="grid h-12 w-12 place-items-center rounded-xl text-white transition-colors bg-accent group-hover:text-white">
                 <s.icon className="h-6 w-6" />
               </div>
 
@@ -384,7 +485,7 @@ function Home() {
 
 
       {/* STATS */}
-      <section data-aos="fade-up" data-aos-delay="100" className="bg-primary py-16 text-white">
+      <section data-aos="fade-up" data-aos-delay="100" className="bg-gradient-to-r from-[#0A3D78] via-[#1565C0] to-[#1E88E5] py-16 text-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
           {stats.map((s) => (
             <div key={s.l} className="text-center text-white">
@@ -403,7 +504,7 @@ function Home() {
       {/* CTA */}
       <section data-aos="zoom-in" data-aos-delay="100" className="px-4 pb-20 pt-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl rounded-3xl bg-secondary p-10 text-center text-white sm:p-16">
-          <h2 className="text-4xl font-bold sm:text-6xl">
+          <h2 className="text-4xl font-bold">
             Need Something Delivered Today?
           </h2>
 
@@ -453,6 +554,17 @@ function Home() {
                         key={testimonial.name}
                         className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm"
                     >
+
+                        {/* Stars */}
+             <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, index) => (
+                    <Star
+                        key={index}
+                     className="w-5 h-5 fill-secondary text-secondary"
+                    />
+                         ))}
+                              </div>
+
                         <p className="text-lg italic text-gray-600">
                             "{testimonial.quote}"
                         </p>

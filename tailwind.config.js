@@ -7,24 +7,28 @@ export default {
 theme: {
   extend: {
     colors: {
-      primary: "#0A3D78",
-      secondary: "#1E88E5",
+      primary: "#0A3D78",  // Navbar, Button Hover,
+      secondary: "#1E88E5", // Primary Buttons
       accent: "#4FC3F7",
-      soft: "#F8FAFC",
-      dark: "#1F2937",
-      grayish: "#8A8F98",
+      soft: "#F8FAFC",     // Body Background
+      dark: "#1F2937",     // Heading 
+      grayish: "#8A8F98", //Paragraphs
     },
   },
 },
   plugins: [],
 }
 
-// // | Element          | Color     |
-// | ---------------- | --------- |
-// | Background       | `#F8FAFC` |
-// | Navbar           | White     |
-// | Primary Text     | `#1F2937` |
-// | Main Brand Color | `#0A3D78` |
-// | Buttons          | `#1E88E5` |
-// | Hover Effects    | `#4FC3F7` |
-// | Borders          | `#E5E7EB` |
+// Professional Color Distribution
+// Element	Color
+// Body Background	#F8FAFC
+// Navbar	#0A3D78
+// Hero Gradient	#0A3D78 → #1E88E5
+// Headings	#1F2937
+// Paragraphs	#8A8F98
+// Primary Buttons	#1E88E5
+// Button Hover	#0A3D78
+// Accent Highlights	#4FC3F7
+// Cards	#FFFFFF
+// Footer	#1F2937
+// Footer Hover	#4FC3F7
