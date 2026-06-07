@@ -240,7 +240,7 @@ function Home() {
 
 
 
-      <h1 className="mt-6 md:text-6xl font-bold leading-tight sm:text-4xl ">
+      <h1 className="mt-6 md:text-6xl font-bold leading-tight text-4xl ">
   {slides[currentSlide].title}
   <br />
   <span className="text-[#4FC3F7]">
