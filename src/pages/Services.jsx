@@ -12,6 +12,7 @@ import Navbar from "../components/Navbar";
 import ServicesHero from "../assets/ServicesHero.jpeg";
 import SiteFooter from "../components/SiteFooter";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 
 function Services() {
@@ -236,12 +237,12 @@ const services = [
           <h2 className="text-3xl font-bold text-white">
             Ready to Get Started?
           </h2>
-          <p className="mt-4 text-white">
+          <p className="mt-4 mb-6 text-white">
             Contact Logistikus today for any logistics service—we deliver with speed, care, and trust.
           </p>
-          <button className="mt-6 rounded-md bg-white px-6 py-3 text-primary hover:scale-105 transition-transform font-semibold">
+          <Link to="/contact" className="mt-20 rounded-md bg-white px-6 py-3 text-primary hover:scale-105 transition-transform font-semibold">
             Contact Us
-          </button>
+          </Link>
         </div>
   
     <SiteFooter/>

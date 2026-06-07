@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import {
   Target,
@@ -153,7 +154,7 @@ function About() {
 
         {/* Cards */}
         <section data-aos="fade-up" data-aos-delay="100" className="bg-soft px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid gap-6 items-center md:grid-cols-2 px-16">
+        <div className="mx-auto grid gap-6 items-center md:grid-cols-2 md:px-16">
           {values.map((item) => (
             <div
               key={item.title}
@@ -186,7 +187,7 @@ function About() {
             {trustItems.map((item) => (
               <li
                 key={item}
-                 className="flex w-full items-center gap-3 sm:justify-start justify-center pl-10"
+                 className="flex w-full items-center gap-3 sm:justify-start md:justify-center justify-start  pl-10"
               >
                 <span className="h-2.5 w-2.5 rounded-full bg-[#1E88E5]" />
 
@@ -201,12 +202,12 @@ function About() {
           <h2 className="text-3xl font-bold text-white">
             Ready to Get Started?
           </h2>
-          <p className="mt-4 text-white">
+          <p className="mt-4 mb-6 text-white">
             Contact us today to learn more about our logistics solutions.
           </p>
-          <button className="mt-6 rounded-md bg-white px-6 py-3 text-primary hover:scale-105 transition-transform font-semibold">
+          <Link to="/contact" className="mt-20 rounded-md bg-white px-6 py-3 text-primary hover:scale-105 transition-transform font-semibold">
             Get in Touch
-          </button>
+          </Link>
         </div>
 
       
