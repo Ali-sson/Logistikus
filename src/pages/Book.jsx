@@ -147,14 +147,14 @@ function Book() {
       `*Pickup:* ${formData.pickup}`,
       `*Delivery:* ${formData.delivery}`,
       "",
-      `*Phone1:* ${formData.phone1}`,
+      `*Delivery Phone:* ${formData.delivery_Phone || "N/A"}`,
       `*Item Description:* ${formData.item}`,
       "",
       formData.location ? `*Location:* ${formData.location}` : null,
       formData.price ? `*Delivery Fee:* ₦${formData.price}` : null,
       "",
       `*Date:* ${formData.date || "ASAP"}`,
-      // `*Time:* ${formData.time || "ASAP"}`,
+      `*Time:* ${formData.time || "ASAP"}`,
       "",
       `*Item:* ${formData.item}`,
       formData.size ? `*Weight/Size:* ${formData.size}` : null,
@@ -354,7 +354,7 @@ function Book() {
                 />
               </Field>
 
-              <Field label="Delivery's Address *">
+              <Field label="Delivery Address *">
                 <input
                   className={inputClass}
                   value={formData.delivery}
