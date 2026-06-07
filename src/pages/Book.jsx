@@ -11,7 +11,7 @@ const SITE = {
 };
 
 const PRICING = {
-  "Barnawa": 1500,
+  "Barnawa": 1000,
   "Central Market": 2000,
   "U/Pama": 2000,
   "Mando": 4000,
@@ -358,7 +358,7 @@ function Book() {
                 <input
                   className={inputClass}
                   value={formData.delivery}
-                  onChange={(e) => updateField("delivery address", e.target.value)}
+                  onChange={(e) => updateField("delivery", e.target.value)}
                   required
                 />
               </Field>
