@@ -9,7 +9,7 @@ import {
 
 import Navbar from "../components/Navbar";
 import SiteFooter from "../components/SiteFooter";
-import FaqHero from "../assets/FaqHero.jpeg";
+import FaqHero from "../assets/contactimg.jpeg";
 import { Helmet } from "react-helmet-async";
 
 function Contact() {

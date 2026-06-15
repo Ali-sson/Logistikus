@@ -112,7 +112,7 @@ function About() {
       <img
         src={Team}
         alt="Logistics team"
-        className="h-full w-full rounded-2xl object-cover shadow-lg"
+        className="h-full w-full  object-cover shadow-lg"
       />
     </div>
 
@@ -206,7 +206,7 @@ function About() {
             Contact us today to learn more about our logistics solutions.
           </p>
           <Link to="/contact" className="mt-20 rounded-md bg-white px-6 py-3 text-primary hover:scale-105 transition-transform font-semibold">
-            Get in Touch
+            Get In Touch
           </Link>
         </div>
 

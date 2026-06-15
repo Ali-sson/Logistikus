@@ -10,8 +10,8 @@ import {
 
 import {
   FaInstagram,
-  FaTwitter,
   FaFacebookF,
+  FaTiktok
 } from "react-icons/fa";
 
 function SiteFooter() {
@@ -20,12 +20,12 @@ function SiteFooter() {
     phone: "+234 911 214 9392",
     email: "logistikuslogisticsltd@gmail.com",
     address: "Shop 7, third floor, EL Gibbor plaza Aliyu Makama Barnawa Kaduna",
-    hours: "Mon - Sat | 8AM - 8PM",
+    hours: "Mon - Sat | 8AM - 5PM",
 
     social: {
-      instagram: "#",
-      twitter: "#",
-      facebook: "#",
+      instagram: "https://www.instagram.com/logistikusltd?igsh=MXR2ZDVycmE2ZGc4cQ==",
+      facebook: "https://web.facebook.com/profile.php?id=61588283313289",
+      tiktok: "https://vm.tiktok.com/ZS9jansSkgwKP-9b1uV/"
     },
   };
 
@@ -162,17 +162,6 @@ function SiteFooter() {
                 <FaInstagram className="h-4 w-4" />
               </a>
 
-              {/* Twitter */}
-              <a
-                href={SITE.social.twitter}
-                target="_blank"
-                rel="noreferrer"
-                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition duration-300 hover:bg-[#1E88E5]"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="h-4 w-4" />
-              </a>
-
               {/* Facebook */}
               <a
                 href={SITE.social.facebook}
@@ -182,6 +171,17 @@ function SiteFooter() {
                 aria-label="Facebook"
               >
                 <FaFacebookF className="h-4 w-4" />
+              </a>
+
+              {/* TikTok */}
+              <a
+                href={SITE.social.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition duration-300 hover:bg-[#1E88E5]"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="h-4 w-4" />
               </a>
             </div>
           </div>

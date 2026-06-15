@@ -28,6 +28,7 @@ import {
 import HeroImage from "../assets/Hero3.jpeg";
 import SiteFooter from "../components/SiteFooter";
 import Navbar from "../components/Navbar"
+import PartnersSponsors from "../components/Partners";
 
 
 function Home() {
@@ -164,22 +165,22 @@ function Home() {
 
   const testimonials = [
     {
-      name: "Anthony O.",
-      role: "Boutique Owner",
+      name: "Pizzy.",
+      role: "Pizzy Enterprise",
       quote:
-        "Logistikus moves my parcels across town faster than I can. My customers are happy, and so am I.",
+        "They render a smooth delivery services with a short period of time with no complain.",
     },
     {
-      name: "James A.",
-      role: "Pharmacy Manager",
-      quote:
-        "Reliable, professional, and always on time. They've become an extension of our business.",
-    },
-    {
-      name: "Grace O.",
+      name: "Titus Nomjimi M.",
       role: "Frequent Sender",
       quote:
-        "I just send a WhatsApp message and it's done. Best errand service in the city, hands down.",
+        "Logistikus Logistics offers reliable and efficient service in Kaduna. Deliveries are handled promptly with good handling of packages. their team is responsive and professional.",
+    },
+    {
+      name: "Peace Ononye.",
+      role: "Frequent Sender",
+      quote:
+        "Fast and reliable delivery services.",
     },
   ];
     
@@ -374,6 +375,11 @@ function Home() {
     </div>
   </div>
 </section>
+
+
+
+
+
       {/* SERVICES */}
       <section data-aos="fade-up" data-aos-delay="100" className="mx-auto px-4 py-20 sm:px-6 lg:px-8 bg-soft ">
         <div className="mb-12 text-center">
@@ -381,7 +387,7 @@ function Home() {
             What we do
           </p>
 
-          <h2 className="mt-2 text-4xl font-bold text-primary sm:text-5xl">
+          <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
             Trusted Services
           </h2>
         </div>
@@ -415,7 +421,7 @@ function Home() {
             Why Us
           </p>
 
-          <h2 className="mt-2 text-4xl font-bold text-primary sm:text-5xl">
+          <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
             Why Choose Logistikus
           </h2>
         </div>
@@ -441,22 +447,24 @@ function Home() {
         </div>
       </section>
 
+      <PartnersSponsors/>
+
       {/* How it works */}
 
-    <section data-aos="fade-up" data-aos-delay="100" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section data-aos="fade-up" data-aos-delay="100" className="mx-auto max-w-7xl px-4 md:py-20 sm:px-6 lg:px-8">
       {/* Heading */}
       <div className="mb-12 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-[#1E88E5]">
           How it works
         </p>
 
-        <h2 className="mt-2 text-4xl font-bold text-primary sm:text-5xl">
+        <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
           Three Simple Steps
         </h2>
       </div>
 
       {/* Cards */}
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 py-12">
         {steps.map((step) => (
           <div
             key={step.number}
@@ -543,7 +551,7 @@ function Home() {
                     Testimonials
                 </p>
 
-                <h2 className="mt-2 text-4xl font-bold text-primary">
+                <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
                     What Our Customers Say
                 </h2>
             </div>
