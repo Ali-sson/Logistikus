@@ -250,10 +250,11 @@ function Home() {
   <br />
   {slides[currentSlide].subtitle}
 </h1>
-
+      <div className="h-20">
      <p className="mt-6 max-w-lg text-lg text-white/90">
   {slides[currentSlide].description}
 </p>
+</div>
       {/* Buttons */}
       <div data-aos="zoom-in" data-aos-delay="100" className="mt-8 flex flex-wrap gap-4">
         <Link
