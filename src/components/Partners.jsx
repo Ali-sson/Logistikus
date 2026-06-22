@@ -10,7 +10,7 @@ const partners = [
 
 export default function PartnersSponsors() {
   return (
-    <section className="py-20 ">
+    <section className="py-10">
       <div className="container mx-auto px-6">
         
         {/* Heading */}
@@ -30,20 +30,20 @@ export default function PartnersSponsors() {
           </p>
         </div> */}
 
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div  data-aos="fade-up" data-aos-delay="100"  className="text-center max-w-3xl mx-auto mb-10">
           <span className="text-primary text-3xl md:text-5xl font-bold">
             Partners & Sponsors
           </span>
           </div>
 
         {/* Logo Grid */}
-       <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto">
+       <div  data-aos="fade-up" data-aos-delay="150" className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto">
   {partners.map((partner) => (
     <img
       key={partner.id}
       src={partner.logo}
       alt={partner.name}
-      className="h-14 object-contain"
+      className="h-20 object-contain"
               />
           ))}
         </div>

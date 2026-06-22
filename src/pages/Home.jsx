@@ -256,7 +256,7 @@ function Home() {
 </p>
 </div>
       {/* Buttons */}
-      <div data-aos="zoom-in" data-aos-delay="100" className="mt-8 flex flex-wrap gap-4">
+      <div data-aos="zoom-in" data-aos-delay="150" className="mt-8 flex flex-wrap gap-4">
         <Link
           to="/book"
           className="inline-flex items-center gap-2 rounded-lg bg-white px-7 py-3.5 text-sm font-semibold text-black transition duration-300 hover:scale-105 hover:text-[#0A3D78]"
@@ -331,7 +331,7 @@ function Home() {
         <div>
           <div className="flex gap-1">
             {[1, 2, 3, 4, 5].map((i) => (
-              <Star
+              <Star 
                 key={i}
                 className="h-4 w-4 fill-yellow-400 text-yellow-400"
               />
@@ -347,7 +347,7 @@ function Home() {
 
     {/* Right Image Card */}
     <div className="relative hidden lg:block">
-      <div data-aos="zoom-in" data-aos-delay="300" className="overflow-hidden rounded-3xl shadow-2xl">
+      <div data-aos="zoom-in" data-aos-delay="500" className="overflow-hidden rounded-3xl shadow-2xl">
         <img
           src={HeroImage}
           alt="Logistikus rider"
@@ -382,18 +382,18 @@ function Home() {
 
 
       {/* SERVICES */}
-      <section data-aos="fade-up" data-aos-delay="100" className="mx-auto px-4 py-20 sm:px-6 lg:px-8 bg-soft ">
+      <section className="mx-auto px-4 py-20 sm:px-6 lg:px-8 bg-soft ">
         <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p  data-aos="fade-up" data-aos-delay="100"  className="text-sm font-semibold uppercase tracking-widest text-accent">
             What we do
           </p>
 
-          <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
+          <h2  data-aos="fade-up" data-aos-delay="100"  className="mt-2 text-3xl md:text-5xl font-bold text-primary">
             Trusted Services
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        <div  data-aos="fade-up" data-aos-delay="150"  className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
           {services.map((s) => (
             <div
               key={s.title}
@@ -416,18 +416,18 @@ function Home() {
       </section>
 
       {/* why */}
-      <section data-aos="fade-up" data-aos-delay="100" className="py-16 text-white bg-secondary/10">
+      <section className="py-16 text-white bg-secondary/10">
           <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+          <p data-aos="fade-up" data-aos-delay="100" className="text-sm font-semibold uppercase tracking-widest text-accent">
             Why Us
           </p>
 
-          <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
+          <h2  data-aos="fade-up" data-aos-delay="100"  className="mt-2 text-3xl md:text-5xl font-bold text-primary">
             Why Choose Logistikus
           </h2>
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
+          <div  data-aos="fade-up" data-aos-delay="100"  className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
             {why.map((w) => (
               <div key={w.title} className="flex gap-3 items-center text-center border rounded-2xl p-4 bg-white backdrop-blur transition hover:bg-white/20">
                 <div className="grid h-12 w-12 place-items-center rounded-full text-secondary">
@@ -452,20 +452,20 @@ function Home() {
 
       {/* How it works */}
 
-    <section data-aos="fade-up" data-aos-delay="100" className="mx-auto max-w-7xl px-4 md:py-20 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-4 md:py-10 sm:px-6 lg:px-8">
       {/* Heading */}
       <div className="mb-12 text-center">
-        <p className="text-sm font-semibold uppercase tracking-widest text-[#1E88E5]">
+        <p data-aos="fade-up" data-aos-delay="100"  className="text-sm font-semibold uppercase tracking-widest text-[#1E88E5]">
           How it works
         </p>
 
-        <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
+        <h2  data-aos="fade-up" data-aos-delay="100"  className="mt-2 text-3xl md:text-5xl font-bold text-primary">
           Three Simple Steps
         </h2>
       </div>
 
       {/* Cards */}
-      <div className="grid gap-8 md:grid-cols-3 py-12">
+      <div  data-aos="fade-up" data-aos-delay="100"  className="grid gap-8 md:grid-cols-3 py-12">
         {steps.map((step) => (
           <div
             key={step.number}
@@ -546,18 +546,18 @@ function Home() {
       </section>
 
       {/* Testimonials */}
-        <section data-aos="fade-up" data-aos-delay="100" className="px-4 py-20 sm:px-6 lg:px-8 bg-secondary/10"> 
+        <section className="px-4 py-20 sm:px-6 lg:px-8 bg-secondary/10"> 
             <div className="mb-12 text-center mx-auto">
-                <p className="text-sm font-semibold uppercase tracking-widest text-[#1E88E5]">
+                <p  data-aos="fade-up" data-aos-delay="100"  className="text-sm font-semibold uppercase tracking-widest text-[#1E88E5]">
                     Testimonials
                 </p>
 
-                <h2 className="mt-2 text-3xl md:text-5xl font-bold text-primary">
+                <h2  data-aos="fade-up" data-aos-delay="100"  className="mt-2 text-3xl md:text-5xl font-bold text-primary">
                     What Our Customers Say
                 </h2>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3 mx-auto max-w-7xl ">
+            <div  data-aos="fade-up" data-aos-delay="100"  className="grid gap-8 md:grid-cols-3 mx-auto max-w-7xl ">
                 {testimonials.map((testimonial) => (
                     <div
                         key={testimonial.name}

@@ -153,8 +153,8 @@ function About() {
     </section>
 
         {/* Cards */}
-        <section data-aos="fade-up" data-aos-delay="100" className="bg-soft px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid gap-6 items-center md:grid-cols-2 md:px-16">
+        <section className="bg-soft px-4 py-20 sm:px-6 lg:px-8">
+        <div  data-aos="fade-up" data-aos-delay="100"  className="mx-auto grid gap-6 items-center md:grid-cols-2 md:px-16">
           {values.map((item) => (
             <div
               key={item.title}
@@ -178,12 +178,12 @@ function About() {
       
 
         {/* Trust */}
-        <div data-aos="fade-up" data-aos-delay="100" className="mt-6 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 bg-white rounded-2xl ">
-          <h2 className="mb-12 text-3xl text-center font-bold text-primary">
+        <div className="mt-6 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 bg-white rounded-2xl ">
+          <h2  data-aos="fade-up" data-aos-delay="100"  className="mb-12 text-3xl text-center font-bold text-primary">
             Why Customers Trust Us
           </h2>
 
-          <ul className="mt-6  grid gap-4 text-gray-600 sm:grid-cols-2 md:justify-items-start justify-items-center lg:grid-cols-3">
+          <ul  data-aos="fade-up" data-aos-delay="100"  className="mt-6  grid gap-4 text-gray-600 sm:grid-cols-2 md:justify-items-start justify-items-center lg:grid-cols-3">
             {trustItems.map((item) => (
               <li
                 key={item}

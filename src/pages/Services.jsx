@@ -208,7 +208,7 @@ const services = [
       </div>
 
       {/* Grid */}
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div  data-aos="fade-up" data-aos-delay="100"  className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {services.map((service) => (
           <div
             key={service.title}
