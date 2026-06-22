@@ -178,7 +178,7 @@ function About() {
       
 
         {/* Trust */}
-        <div className="mt-6 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 bg-white rounded-2xl ">
+        <div className="mt-6 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 bg-white rounded-2xl ">
           <h2  data-aos="fade-up" data-aos-delay="100"  className="mb-12 text-3xl text-center font-bold text-primary">
             Why Customers Trust Us
           </h2>
