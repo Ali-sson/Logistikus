@@ -465,7 +465,7 @@ function Home() {
       </div>
 
       {/* Cards */}
-      <div  data-aos="fade-up" data-aos-delay="100"  className="grid gap-8 md:grid-cols-3 py-12">
+      <div  data-aos="fade-up" data-aos-delay="100"  className="grid gap-8 md:grid-cols-3 py-6">
         {steps.map((step) => (
           <div
             key={step.number}
